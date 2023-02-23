@@ -18,7 +18,7 @@ const singleTextTokenizer = (singleTokenizedText: string) => {
 
   const textLength = singleTokenizedText.length;
 
-  const spliceBy = Math.floor(textLength / 2);
+  const spliceBy = Math.floor(textLength / 1.3);
   const splicedText: string[] = storedText.splice(0, spliceBy);
 
   const splicedEndText: string[] = storedText.splice(spliceBy - spliceBy);

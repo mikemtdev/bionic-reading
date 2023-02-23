@@ -10,7 +10,12 @@ export default function App() {
   const text = index(textInput);
 
   return (
-    <div>
+    <div
+      style={{
+        width: '600px',
+        margin: '0 auto',
+      }}
+    >
       <div dangerouslySetInnerHTML={{ __html: text }} />
       <textarea
         style={{
