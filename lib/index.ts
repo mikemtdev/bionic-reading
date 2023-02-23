@@ -1,5 +1,5 @@
 export const index = (text: string) => {
-  const tokenized: string[] = tokenizer(text);
+  const tokenized: string[] = splitTextToArray(text);
   return builder(tokenized);
 };
 
@@ -24,18 +24,15 @@ const singleTextTokenizer = (singleTokenizedText: string) => {
   const splicedEndText: string[] = storedText.splice(spliceBy - spliceBy);
 
   const textJoined = splicedText.join('');
-  // console.log('splicedEndText', splicedEndText);
   const toHtml = `<b>${textJoined}</b>${splicedEndText.join('')}`;
   const temp = document.createElement('span');
   temp.innerHTML = toHtml;
 
   const htmlObject = temp.innerHTML;
-  // console.log(htmlObject);
   return htmlObject;
 };
 
-const tokenizer = (text: string): string[] => {
+const splitTextToArray = (text: string): string[] => {
   const textAsArray = text.split(' ');
-
   return textAsArray;
 };
